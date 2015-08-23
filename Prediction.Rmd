@@ -1,0 +1,69 @@
+---
+title: "Exercise Manner Prediction"
+author: "Bai"
+date: "Tuesday, August 18, 2015"
+output: 
+  html_document:
+    keep_md: true
+---
+
+##Synopsis
+The goal of this project is to predict the manner in which they did the exercise. This is the "classe" variable in the training set.
+
+##Data Processing
+Download training data and testing data. 
+```{r,echo=TRUE,cache=TRUE}
+# read file into data frame
+trainingDF <- read.csv("./data/pml-training.csv",na.strings = c('NA','#DIV/0!',''))
+testingDF  <- read.csv("./data/pml-testing.csv",na.strings = c('NA','#DIV/0!',''))
+```
+Split the training data into training set to build the prediction model (70%) and testing set for model validation (30%).
+```{r,echo=TRUE,cache=TRUE,warning=FALSE}
+library(caret)
+set.seed(32323)
+inTrain <- createDataPartition(y=trainingDF$classe,p=.7,list=FALSE)
+training <- trainingDF[inTrain,]
+testing  <- trainingDF[-inTrain,]
+dim(training);dim(testing)
+```
+
+##Data Exploratory and Cleaning
+All the data exploratory is applied on the training set.Note there are 159 variables in the dataset. Let's check the NAs in each column and clean the variables with NAs. 
+
+```{r,echo=TRUE,cache=TRUE}
+feature_index <- colnames(training)
+feature_index <- colnames(training[colSums(is.na(training)) == 0])
+length(feature_index)
+```
+There are 60 columns without NAs. By observating those columns, remove column 1 to 7 which are discriptions of the record.
+
+```{r,echo=TRUE,cache=TRUE}
+feature_index
+feature_index <- feature_index[-c(1:7)]
+training <- training[,feature_index]
+dim(training)
+```
+
+##Preprocess and Model 
+Use PCA method in preprocess and rf as prediction model.
+
+```{r,echo=TRUE,cache=TRUE}
+
+modelFit <- train(training$classe ~ .,method="rf",preProcess="pca",data=training[,-53],na.action=na.pass)
+modelFit
+```
+
+##Cross Validation
+Apply the model on testing set and compare with the real result. The Accuracy is 97.16%. The out of sample error is 1-accuracy which is 0.0284.
+
+```{r,echo=TRUE,cache=TRUE}
+confusionMatrix(testing$cla,predict(modelFit,testing[,-53]))
+```
+
+##Prediction
+Apply the model on the test file.
+```{r,echo=TRUE,cache=TRUE}
+predict(modelFit,testingDF)
+```
+
+
