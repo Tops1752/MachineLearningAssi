@@ -47,7 +47,7 @@ dim(training)
 ##Preprocess and Model 
 Use PCA method in preprocess and rf as prediction model.
 
-```{r,echo=TRUE,cache=TRUE}
+```{r,echo=TRUE,cache=TRUE,warning=FALSE}
 
 modelFit <- train(training$classe ~ .,method="rf",preProcess="pca",data=training[,-53],na.action=na.pass)
 modelFit
@@ -56,7 +56,7 @@ modelFit
 ##Cross Validation
 Apply the model on testing set and compare with the real result. The Accuracy is 97.16%. The out of sample error is 1-accuracy which is 0.0284.
 
-```{r,echo=TRUE,cache=TRUE}
+```{r,echo=TRUE,cache=TRUE,warning=FALSE}
 confusionMatrix(testing$cla,predict(modelFit,testing[,-53]))
 ```
 
