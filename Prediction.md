@@ -99,272 +99,6 @@ Use PCA method in preprocess and rf as prediction model.
 
 ```r
 modelFit <- train(training$classe ~ .,method="rf",preProcess="pca",data=training[,-53],na.action=na.pass)
-```
-
-```
-## Loading required package: randomForest
-```
-
-```
-## Warning: package 'randomForest' was built under R version 3.1.3
-```
-
-```
-## randomForest 4.6-10
-## Type rfNews() to see new features/changes/bug fixes.
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```
-## Warning in randomForest.default(x, y, mtry = param$mtry, ...): invalid
-## mtry: reset to within valid range
-```
-
-```r
 modelFit
 ```
 
@@ -381,9 +115,9 @@ modelFit
 ## Resampling results across tuning parameters:
 ## 
 ##   mtry  Accuracy   Kappa      Accuracy SD  Kappa SD   
-##    2    0.9622108  0.9521793  0.003797982  0.004797110
-##   27    0.9437010  0.9287634  0.005974279  0.007583682
-##   52    0.9440001  0.9291441  0.005760449  0.007310966
+##    2    0.9624171  0.9524411  0.003631982  0.004584029
+##   27    0.9438287  0.9289230  0.006032378  0.007652144
+##   52    0.9436319  0.9286754  0.005952228  0.007555538
 ## 
 ## Accuracy was used to select the optimal model using  the largest value.
 ## The final value used for the model was mtry = 2.
@@ -402,33 +136,33 @@ confusionMatrix(testing$cla,predict(modelFit,testing[,-53]))
 ## 
 ##           Reference
 ## Prediction    A    B    C    D    E
-##          A 1654    0    5   11    4
-##          B   25 1101   13    0    0
-##          C    3   17  990   13    3
-##          D    2    1   45  914    2
-##          E    0    5    7    5 1065
+##          A 1656    0    7    9    2
+##          B   20 1105   14    0    0
+##          C    3   17  991   14    1
+##          D    2    1   44  915    2
+##          E    0    7    7    6 1062
 ## 
 ## Overall Statistics
 ##                                           
-##                Accuracy : 0.9726          
-##                  95% CI : (0.9681, 0.9767)
-##     No Information Rate : 0.2862          
+##                Accuracy : 0.9735          
+##                  95% CI : (0.9691, 0.9774)
+##     No Information Rate : 0.2856          
 ##     P-Value [Acc > NIR] : < 2.2e-16       
 ##                                           
-##                   Kappa : 0.9654          
-##  Mcnemar's Test P-Value : 1.064e-09       
+##                   Kappa : 0.9665          
+##  Mcnemar's Test P-Value : 7.388e-09       
 ## 
 ## Statistics by Class:
 ## 
 ##                      Class: A Class: B Class: C Class: D Class: E
-## Sensitivity            0.9822   0.9795   0.9340   0.9692   0.9916
-## Specificity            0.9952   0.9920   0.9925   0.9899   0.9965
-## Pos Pred Value         0.9881   0.9666   0.9649   0.9481   0.9843
-## Neg Pred Value         0.9929   0.9952   0.9856   0.9941   0.9981
-## Prevalence             0.2862   0.1910   0.1801   0.1602   0.1825
-## Detection Rate         0.2811   0.1871   0.1682   0.1553   0.1810
+## Sensitivity            0.9851   0.9779   0.9323   0.9693   0.9953
+## Specificity            0.9957   0.9928   0.9927   0.9901   0.9958
+## Pos Pred Value         0.9892   0.9701   0.9659   0.9492   0.9815
+## Neg Pred Value         0.9941   0.9947   0.9852   0.9941   0.9990
+## Prevalence             0.2856   0.1920   0.1806   0.1604   0.1813
+## Detection Rate         0.2814   0.1878   0.1684   0.1555   0.1805
 ## Detection Prevalence   0.2845   0.1935   0.1743   0.1638   0.1839
-## Balanced Accuracy      0.9887   0.9858   0.9633   0.9796   0.9940
+## Balanced Accuracy      0.9904   0.9854   0.9625   0.9797   0.9956
 ```
 
 ##Prediction
